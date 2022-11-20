@@ -23,9 +23,7 @@
     "@types/react-dom": "^18.0.8",
     "@types/styled-components": "^5.1.26",
     "@vitejs/plugin-react": "^2.2.0",
-    "gh": "^2.8.9",
     "gh-pages": "^4.0.0",
-    "pages": "^0.0.16",
     "typescript": "^4.6.4",
     "vite": "^3.2.3"
   }
