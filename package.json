@@ -1,5 +1,5 @@
 {
-  "homepage": "https://fernandobarrosd.github.io/poke-info",
+  "homepage": "https://fernandobarrosd.poke-info.com.br",
   "name": "poke-info",
   "private": true,
   "version": "0.0.0",
@@ -9,8 +9,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "host": "vite --host",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "publish": "npm run build && node_modules/.bin/gh-pages -d build"
   },
   "dependencies": {
     "@types/react-router-dom": "^5.3.3",
