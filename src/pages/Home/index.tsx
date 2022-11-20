@@ -30,10 +30,6 @@ export const Home = () => {
 
             setPokemonData(pokeApiData);
 
-            console.log(pokemonData)
-
-            
-
             setErrorData({
                 message: "",
                 visible: false
@@ -41,7 +37,6 @@ export const Home = () => {
 
             
         } catch (error) {
-            console.log("error")
             setErrorData({
                 message: "Invalid Pokemon Name",
                 visible: true
