@@ -20,6 +20,7 @@ export const Home = () => {
 
     
      const setPokemon = async () => {
+       
         try {
             const newPokemonName = pokemonName.toLowerCase();
             const POKE_API_URL = `https://pokeapi.co/api/v2/pokemon/${newPokemonName}`;
@@ -51,6 +52,10 @@ export const Home = () => {
      
     const handleSearch = (e : React.MouseEvent) => {
         e.preventDefault();
+        setErrorData({
+         message: "",
+         visible: false
+       })
         if (pokemonName) {
           setPokemon();
         }
