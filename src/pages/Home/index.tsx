@@ -51,7 +51,16 @@ export const Home = () => {
      
     const handleSearch = (e : React.MouseEvent) => {
         e.preventDefault();
-        setPokemon();  
+        if (e.target.value) {
+          setErrorData({
+            message: "The field is empty",
+            visible: true
+          })
+        }
+        else {
+          setPokemon();
+        }
+          
     }
 
 
