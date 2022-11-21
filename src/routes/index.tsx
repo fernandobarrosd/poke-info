@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { ComingSoon } from "../pages/ComingSoon";
+import { CommingSoon } from "../pages/ComingSoon";
 import { ErrorPage } from "../pages/ErrorPage";
 import { Home } from "../pages/Home";
 
@@ -11,7 +11,7 @@ export const AppRoutes = () => {
             <Route path="/shinys" 
             element={<ComingSoon/>}/>
             <Route path="/pokemon/:name"
-            element={<ComingSoon/>}/>
+            element={<CommingSoon/>}/>
             <Route path="*" element={<ErrorPage/>}/>
         </Routes>
     )
