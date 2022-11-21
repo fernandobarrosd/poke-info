@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { CommingSoon } from "../pages/ComingSoon";
+import { CommingSoon } from "../pages/CommingSoon";
 import { ErrorPage } from "../pages/ErrorPage";
 import { Home } from "../pages/Home";
 
