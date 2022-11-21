@@ -5,7 +5,9 @@ export const ErrorPage = () => {
     return (
         <>
             <Layout title="Error Page">
-              <ButtonLink to="/">Go to home</ButtonLink>
+              <ButtonLink to="/">
+                Go to home
+              </ButtonLink>
             </Layout>
         </>
         

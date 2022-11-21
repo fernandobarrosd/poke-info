@@ -9,7 +9,7 @@ export const AppRoutes = () => {
         <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/shinys" 
-            element={<ComingSoon/>}/>
+            element={<CommingSoon/>}/>
             <Route path="/pokemon/:name"
             element={<CommingSoon/>}/>
             <Route path="*" element={<ErrorPage/>}/>

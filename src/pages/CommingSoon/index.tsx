@@ -5,7 +5,9 @@ export const CommingSoon = () => {
     return (
         <>
             <Layout title="Comming Soon">
-              <ButtonLink to="/">Go to home</ButtonLink>
+              <ButtonLink to="/">
+                Go to home
+              </ButtonLink>
             </Layout>
         </>
         
