@@ -1,22 +1,25 @@
 import { Container } from "./style";
-import { Header } from "../../components/Header";
-import { Input } from "../../components/Input";
-import { PokemonCard } from "../../components/PokemonCard";
+import { Header } from "../../components/molecules/Header";
+import { Input } from "../../components/molecules/Input";
+import { PokemonCard } from "../../components/molecules/PokemonCard";
 import React, { useState } from "react";
 import { Pokemon } from "../../types";
-import { Form } from "../../components/Form";
-import { ErrorMessage } from "../../components/ErrorMessage";
-import { Loading } from "../../components/Loading";
-import { Title } from "../../components/Title";
+import { Form } from "../../components/molecules/Form";
+import { ErrorMessage } from "../../components/atomics/ErrorMessage";
+import { Loading } from "../../components/atomics/Loading";
+import { Heading } from "../../components/atomics/Heading";
+import { useNavigate } from "react-router-dom";
+
 
 
 export const Home = () => {
     const [pokemonData, setPokemonData] = useState<Pokemon>({name: "", 
     sprites: { front_default: "" }, types: [ { type: { name: "" } } ]});
     
-    const [pokemonName, setPokemonNane] = useState("");
+    const [pokemonName, setPokemonName] = useState("");
     const [errorData, setErrorData] = useState({message: "", visible: false});
     const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
 
     
      const setPokemon = async () => {
@@ -64,27 +67,31 @@ export const Home = () => {
             message: "The pokemon name field is empty",
             visible: true
           })
+
+          setPokemonName("")
+          setPokemonData({} as Pokemon);
         }
-        
-        
           
     }
 
 
     const handleOnChange = (e : React.ChangeEvent<HTMLInputElement>) => {
-        setPokemonNane(e.target.value);
+        setPokemonName(e.target.value);
     }
     return (
         <>
             <Header/>
             <Container>
-                <Title>Search Pokemon</Title>
+            <Heading onClick={() => navigate("/")}
+            element="h2" fontFamily="Pokemon Solid" 
+            color="color-second" countourColor="black"
+            contourWidth={1}>Search Pokemon</Heading>
                 <Loading visible={loading}/>
                 <Form buttonSubmitText="Search Pokemon" formSubmit={handleSearch}>
                     <fieldset>
-                        <Input onChange={handleOnChange}
+                        <Input label="Search Pokemon"
                         defaultValue={pokemonName}
-                        label="Pokemon name"/>
+                        onInput={handleOnChange}/>
                     </fieldset>
                     <ErrorMessage message={errorData.message}
                     visible={errorData.visible}/>

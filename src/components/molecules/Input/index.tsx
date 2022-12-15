@@ -1,11 +1,11 @@
 
-import { ErrorMessage } from "../ErrorMessage";
+import { ErrorMessage } from "../../atomics/ErrorMessage";
 import { Container } from "./style";
 
 
 
 
-interface InputProps extends React.HtmlHTMLAttributes<HTMLInputElement> {
+export interface InputProps extends React.HtmlHTMLAttributes<HTMLInputElement> {
    label?: string;
 }
 

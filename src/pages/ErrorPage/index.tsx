@@ -1,5 +1,5 @@
-import { ButtonLink } from "../../components/ButtonLink"
-import { Layout } from "../../components/Layout";
+import { ButtonLink } from "../../components/atomics/ButtonLink"
+import { Layout } from "../../components/templates/Layout";
 
 export const ErrorPage = () => {
     return (

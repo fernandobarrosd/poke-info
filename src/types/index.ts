@@ -8,7 +8,7 @@ interface PokemonImage {
     front_default: string;
 }
 
-interface PokemonTypes {
+export interface PokemonTypes {
     type: PokemonType;
 }
 

@@ -23,15 +23,7 @@ export const Form = styled.form`
     flex-direction: column;
     align-items: center;
 
-    fieldset {
-        border: 0;
-        width: 95%;
-        input {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-
-    }
+    
 
     button {
         width: 95%;
@@ -46,4 +38,13 @@ export const Form = styled.form`
             
         }
     }
+`
+
+export const Fields = styled.fieldset`
+    border: 0;
+        width: 95%;
+        input {
+            width: 100%;
+            margin-bottom: 20px;
+        }
 `

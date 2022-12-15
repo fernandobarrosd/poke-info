@@ -1,4 +1,4 @@
-import { Header } from "../Header";
+import { Header } from "../../molecules/Header";
 import { Container } from "./style";
 
 import React from "react";

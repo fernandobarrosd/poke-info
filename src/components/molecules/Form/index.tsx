@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../Button";
+import { Button } from "../../atomics/Button";
 import { Container } from "./style";
 
 interface FormProps extends React.HTMLAttributes<HTMLFormElement>{
